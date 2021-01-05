@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    tools:context=".ui.ImageDetailFragment">
+
+    <ImageView
+        android:id="@+id/iv_image_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"/>
+
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Add Logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/tvText"
+        app:layout_constraintStart_toStartOf="@id/iv_image_detail"
+        app:layout_constraintTop_toBottomOf="@id/iv_image_detail" />
+
+    <ImageView
+        android:id="@+id/ivImagePick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintStart_toStartOf="@id/tvLogo"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Add Text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_image_detail"
+        app:layout_constraintStart_toEndOf="@id/tvLogo"
+        app:layout_constraintTop_toBottomOf="@id/iv_image_detail" />
+
+    <EditText
+        android:id="@+id/etAddText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add Text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvText"
+        app:layout_constraintStart_toStartOf="@id/tvText"
+        app:layout_constraintTop_toBottomOf="@id/tvText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60"/>
+
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:text="Simpan"
+        app:layout_constraintTop_toBottomOf="@id/ivImagePick"
+        app:layout_constraintStart_toStartOf="@id/ivImagePick"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
+        app:layout_constraintBottom_toBottomOf="@id/btnShare"/>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
+        android:text="Share"
+        app:layout_constraintTop_toBottomOf="@id/etAddText"
+        app:layout_constraintEnd_toEndOf="@id/etAddText"
+        app:layout_constraintStart_toEndOf="@id/btnSimpan"
+        app:layout_constraintBottom_toBottomOf="@id/btnSimpan"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
